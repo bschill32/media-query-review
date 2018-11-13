@@ -1,0 +1,96 @@
+/* Start with mobile first design */
+header {
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-title {
+    margin-right: auto;
+}
+
+.nav-link {
+    display: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.blog-post-container {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3px; 
+}
+
+.blog-post {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 500px) {
+    .fa-bars {
+        display: none;
+    }
+    .nav-link {
+        display: initial;
+        margin: 0px 5px;
+        font-size: 16px;
+        transition: font-size 1s;
+    }
+    .nav-link:hover {
+        font-size: 18px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 650px) {
+    .blog-post-container {
+        width: 80%;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    section {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .blog-post-container {
+        width: 60%;
+    }
+
+    .widget-container {
+        width: 30%;
+        background-color: black;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .blog-post {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .widget-button {
+        display: initial;
+        position: relative;
+        background-color: blue;
+        height: 20px;
+        border: none;
+        color: white;
+    }
+}
